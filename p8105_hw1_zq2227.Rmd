@@ -97,8 +97,31 @@ fact_vect
 ```{r}
 p2data <- tibble(norm_samp,logic_samp,char_samp,fact_vect)
 #Create the data frame 
+p2data
 ```
 
+### Mean
+```{r}
+mean_num <- mean(p2data %>% pull(norm_samp), na.rm = TRUE)
+mean_num
+#mean of norm_samp work
+```
+```{r}
+mean_logic <- mean(p2data %>% pull(logic_samp), na.rm = TRUE)
+mean_logic
+# mean of logic_samp work 
+```
+```{r}
+mean_char <- mean(p2data %>% pull(char_samp), na.rm = TRUE)
+mean_char
+#mean of char_samp doesnot work
+```
+```{r}
+mean_factor <- mean(p2data %>% pull(fact_vect), na.rm = TRUE)
+mean_factor
+#mean fo fact_vect does not work
+```
+#### Summary: Could take the mean from the numeric or logical vector, However, the mean valuse does not work on the character vector  or factor vector.
 
 
 
