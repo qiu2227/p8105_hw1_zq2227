@@ -61,5 +61,18 @@ labs(title= "Temperature and Humidity vs Time hour", y="Temperature(T)", x="Time
 #### Description
 #### From the graph, it can be concluded that the temperature shows sharp fluctuations in a short  time interval but gradually increases over time. The short-term temperature changes are due to the alternation of day and night, while the overall rise in temperature is due to the warming climate as January progresses. The  relatively humidity is indicated by the color of the points, and the overall relative humidity also gradually increases with time. The humidity in mid-January is noticeably higher than that at the beginning of January.
 
+```{r}
+plot1 <-ggplot(early_january_weather, aes(x =time_hour,y= temp, color= humid)) + geom_point(size=3) +
+labs(title= "Temperature and Humidity vs Time hour", y="Temperature(T)", x="Time")
+```
+```{r}
+ggsave("problem 1 Temp vs time plot.png", plot=plot1)
+
+```
+
+
+## Pronlem 2 
+
+
 
 
