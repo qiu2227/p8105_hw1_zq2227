@@ -71,7 +71,33 @@ ggsave("problem 1 Temp vs time plot.png", plot=plot1)
 ```
 
 
-## Pronlem 2 
+## Problem 2 
+```{r}
+norm_samp <- rnorm(10)
+#a random sample of size 10 from a standard Normal distribution
+norm_samp
+```
+```{r}
+logic_samp <- norm_samp >0
+#a logical vector indicating whether elements of the sample are greater than 0
+logic_samp
+```
+```{r}
+char_samp<- c("q","a","z","w","s","x","e","d","c","r")
+#a character vector of length 10
+char_samp
+```
+```{r}
+fact_level <-c("LV1","LV2","LV3")
+fact_samp <-sample(fact_level,10,replace = T)
+fact_vect <-factor(fact_samp)
+#a factor vector of length 10, with 3 different factor “levels”
+fact_vect
+```
+```{r}
+p2data <- tibble(norm_samp,logic_samp,char_samp,fact_vect)
+#Create the data frame 
+```
 
 
 
