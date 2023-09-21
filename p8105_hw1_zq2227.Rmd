@@ -124,4 +124,26 @@ mean_factor
 #### Summary: Could take the mean from the numeric or logical vector, However, the mean valuse does not work on the character vector  or factor vector.
 
 
+###  Convert variables
+```{r}
+num_logic <-as.numeric(logic_samp)
+num_logic
+#logic convert to numeric. work
+```
+```{r}
+num_char <- as.numeric(char_samp)
+num_char
+# character convert to numeric. result is NA
+```
+```{r}
+num_factor <-as.numeric(fact_vect)
+num_factor
+#factor convert to numeric. work
+```
+#### Summary: 
+* For logical vectors the as.numeric the  function convert logic variables  to the numeric vector that True become 1 and False become 0. Before the convert, if we try to take the mean of logical vector, it actually calculate the frequency of True rather than number.
+* For character vectors, the as.numeric only can convert the number character, if the character is not number, it will become NA in the calculation. 
+* For factor vector, R can not get the numerical value directly from the factor vector level. Since every level of factor has a code that represent its level order. The as.numeric function  could convert the  factor level to its integer levels . Then the R could calculate the mean or other Value. However, this order integer is nor actual values of level.
+* The  as.numeric function help to explain taking the mean. R can not get the mean from the non-numeric data. as.numeric try to convert other variables to a numerical form for calculate. The non-numeric character will replace to the "NA" during the convert and it will also affect the mean value unless handled. 
+
 
