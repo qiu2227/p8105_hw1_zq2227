@@ -17,7 +17,7 @@ data("early_january_weather")
 ```
 
 
-Write a short description of the dataset using inline R code;
+### Write a short description of the dataset;
 ```{r}
 help("early_january_weather")
 ```
@@ -47,5 +47,8 @@ mean(early_january_weather$temp)
    * Wind_speed range [0,24.166MPH]. Mean: 8.226MPH. Median: 8.055MPH.  The wind direction are in degrees.
    * Pressure:Sea level pressure in millibars. Median:1022. Mean:1023
    * Visibility in miles [0.120,10.000].  Mean:8.515. Media:10.000  
+
+### Plot 
+
 
 
